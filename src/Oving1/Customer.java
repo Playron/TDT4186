@@ -8,10 +8,15 @@ public class Customer {
      *  Creates a new Customer.
      *  Each customer should be given a unique ID
      */
+	
+	private static int customer_numbers = 1;
+	private int customer_id;
+	
     public Customer() {
         // TODO Implement required functionality
+    	customer_id = SushiBar.customerCounter.get();
+    	SushiBar.customerCounter.increment();
     }
-
 
     /**
      * Here you should implement the functionality for ordering food as described in the assignment.
