@@ -38,7 +38,7 @@ public class WaitingArea {
     		}if(SushiBar.isOpen) {
     			customer.notify();
     			q.add(customer);
-    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #:" + );
+    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #: " + customer.getCustomerID() + " venter");
     		}
     		
     	}
@@ -51,6 +51,7 @@ public class WaitingArea {
      */
     public synchronized Customer next() {
         // TODO Implement required functionality
+    	
     	
     }
 
