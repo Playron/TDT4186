@@ -50,6 +50,19 @@ public class WaitingArea {
      * @return The customer that is first in line.
      */
     public synchronized Customer next() {
+    	while(SushiBar.isOpen && q.isEmpty()) {
+    		try {
+    			this.wait();
+    		}catch(Exception e){
+    			e.printStackTrace();
+    		}
+    		if(q.isEmpty() == false) {
+    			this.notifyAll();
+    			return q.remove();
+    		}
+    	}
+    	
+    	return null;
         // TODO Implement required functionality
     	
     	
