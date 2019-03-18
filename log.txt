@@ -1,0 +1,97 @@
+17:39:59:543, Thread-1: Kunde #0 venter
+17:39:59:574, Thread-9: Kunde #0 er servert
+17:39:59:628, Thread-9: Kunde #0 spiser
+17:39:59:674, Thread-1: Kunde #1 venter
+17:39:59:677, Thread-3: Kunde #1 er servert
+17:39:59:730, Thread-3: Kunde #1 spiser
+17:39:59:777, Thread-1: Kunde #2 venter
+17:39:59:784, Thread-6: Kunde #2 er servert
+17:39:59:841, Thread-6: Kunde #2 spiser
+17:39:59:884, Thread-1: Kunde #3 venter
+17:39:59:892, Thread-4: Kunde #3 er servert
+17:39:59:951, Thread-4: Kunde #3 spiser
+17:39:59:993, Thread-1: Kunde #4 venter
+17:40:00:03, Thread-8: Kunde #4 er servert
+17:40:00:66, Thread-8: Kunde #4 spiser
+17:40:00:103, Thread-1: Kunde #5 venter
+17:40:00:111, Thread-2: Kunde #5 er servert
+17:40:00:170, Thread-2: Kunde #5 spiser
+17:40:00:212, Thread-1: Kunde #6 venter
+17:40:00:220, Thread-5: Kunde #6 er servert
+17:40:00:278, Thread-5: Kunde #6 spiser
+17:40:00:321, Thread-1: Kunde #7 venter
+17:40:00:330, Thread-7: Kunde #7 er servert
+17:40:00:391, Thread-7: Kunde #7 spiser
+17:40:00:431, Thread-1: Kunde #8 venter
+17:40:00:542, Thread-1: Kunde #9 venter
+17:40:00:649, Thread-1: Kunde #10 venter
+17:40:00:755, Thread-1: Kunde #11 venter
+17:40:00:861, Thread-1: Kunde #12 venter
+17:40:00:969, Thread-1: Kunde #13 venter
+17:40:01:85, Thread-1: Kunde #14 venter
+17:40:01:193, Thread-1: Kunde #15 venter
+17:40:01:301, Thread-1: Kunde #16 venter
+17:40:01:410, Thread-1: Kunde #17 venter
+17:40:01:514, Thread-1: Kunde #18 venter
+17:40:01:618, Thread-1: Kunde #19 venter
+17:40:01:726, Thread-1: Kunde #20 venter
+17:40:01:834, Thread-1: Kunde #21 venter
+17:40:01:943, Thread-1: Kunde #22 venter
+17:40:03:847, Thread-6: Kunde #2 drar
+17:40:03:856, Thread-6: Kunde #8 er servert
+17:40:03:916, Thread-6: Kunde #8 spiser
+17:40:12:401, Thread-7: Kunde #7 drar
+17:40:12:412, Thread-7: Kunde #9 er servert
+17:40:12:471, Thread-7: Kunde #9 spiser
+17:40:13:632, Thread-9: Kunde #0 drar
+17:40:13:642, Thread-9: Kunde #10 er servert
+17:40:13:702, Thread-9: Kunde #10 spiser
+17:40:13:958, Thread-4: Kunde #3 drar
+17:40:13:968, Thread-4: Kunde #11 er servert
+17:40:14:27, Thread-4: Kunde #11 spiser
+17:40:17:713, Thread-9: Kunde #10 drar
+17:40:17:724, Thread-9: Kunde #12 er servert
+17:40:17:783, Thread-9: Kunde #12 spiser
+17:40:17:924, Thread-6: Kunde #8 drar
+17:40:17:933, Thread-6: Kunde #13 er servert
+17:40:17:993, Thread-6: Kunde #13 spiser
+17:40:18:179, Thread-2: Kunde #5 drar
+17:40:18:191, Thread-2: Kunde #14 er servert
+17:40:18:251, Thread-2: Kunde #14 spiser
+17:40:19:737, Thread-3: Kunde #1 drar
+17:40:19:746, Thread-3: Kunde #15 er servert
+17:40:19:807, Thread-3: Kunde #15 spiser
+17:40:20:76, Thread-8: Kunde #4 drar
+17:40:20:86, Thread-8: Kunde #16 er servert
+17:40:20:145, Thread-8: Kunde #16 spiser
+17:40:20:286, Thread-5: Kunde #6 drar
+17:40:20:296, Thread-5: Kunde #17 er servert
+17:40:20:357, Thread-5: Kunde #17 spiser
+17:40:22:155, Thread-8: Kunde #16 drar
+17:40:22:164, Thread-8: Kunde #18 er servert
+17:40:22:221, Thread-8: Kunde #18 spiser
+17:40:22:366, Thread-5: Kunde #17 drar
+17:40:22:376, Thread-5: Kunde #19 er servert
+17:40:22:440, Thread-5: Kunde #19 spiser
+17:40:23:816, Thread-3: Kunde #15 drar
+17:40:23:825, Thread-3: Kunde #20 er servert
+17:40:23:886, Thread-3: Kunde #20 spiser
+17:40:24:452, Thread-5: Kunde #19 drar
+17:40:24:462, Thread-5: Kunde #21 er servert
+17:40:24:481, Thread-7: Kunde #9 drar
+17:40:24:488, Thread-7: Kunde #22 er servert
+17:40:24:523, Thread-5: Kunde #21 spiser
+17:40:24:545, Thread-7: Kunde #22 spiser
+17:40:26:35, Thread-4: Kunde #11 drar
+17:40:27:791, Thread-9: Kunde #12 drar
+17:40:27:896, Thread-3: Kunde #20 drar
+17:40:28:261, Thread-2: Kunde #14 drar
+17:40:30:02, Thread-6: Kunde #13 drar
+17:40:30:230, Thread-8: Kunde #18 drar
+17:40:36:530, Thread-5: Kunde #21 drar
+17:40:40:553, Thread-7: Kunde #22 drar
+17:40:40:560, INGEN FLERE KUNDER I SJAPPA - SJAPPA ER NÅ STENGT!.
+
+17:40:40:566, Ordre: 171
+17:40:40:575, Takeaway Ordre: 48
+17:40:40:581, Bar Ordre: 123

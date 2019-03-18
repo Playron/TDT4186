@@ -45,19 +45,19 @@ public class SushiBar {
         takeawayOrders = new SynchronizedInteger(0);
         
         WaitingArea waitingArea = new WaitingArea(waitingAreaCapacity);
-        Clock clock = new Clock(duration);
-        Thread doorThread = new Thread(new Door(waitingArea));
-        doorThread.start();
+        Clock klokke = new Clock(duration);
+        Thread dør = new Thread(new Door(waitingArea));
+        dør.start();
 
         ArrayList<Thread> waitresses = new ArrayList<>();
         for (int i = 0; i < waitressCount; i++) {
-            Thread waitressThread = new Thread(new Waitress(waitingArea));
-            waitresses.add(waitressThread);
-            waitressThread.start();
+            Thread wThread = new Thread(new Waitress(waitingArea));
+            waitresses.add(wThread);
+            wThread.start();
         }
 
         try {
-            doorThread.join();
+            dør.join();
             for (int i = 0; i < waitressCount; i++) {
                 waitresses.get(i).join();
             }
@@ -65,11 +65,11 @@ public class SushiBar {
         catch (InterruptedException e) {
             e.printStackTrace();
         }
-        SushiBar.write("***** NO MORE CUSTOMERS - THE SHOP IS CLOSED NOW. *****\n");
+        SushiBar.write("INGEN FLERE KUNDER I SJAPPA - SJAPPA ER NÅ STENGT!.\n");
 
-        SushiBar.write("Total orders: " + SushiBar.totalOrders.get());
-        SushiBar.write("Total takeaways: " + SushiBar.takeawayOrders.get());
-        SushiBar.write("Total bar orders: " + SushiBar.servedOrders.get());
+        SushiBar.write("Ordre: " + SushiBar.totalOrders.get());
+        SushiBar.write("Takeaway Ordre: " + SushiBar.takeawayOrders.get());
+        SushiBar.write("Bar Ordre: " + SushiBar.servedOrders.get());
         
         
 

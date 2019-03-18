@@ -46,17 +46,14 @@ public class WaitingArea {
      * @return The customer that is first in line.
      */
     public synchronized Customer next() {
-    	System.out.println("NEXT");
     	while(SushiBar.isOpen && q.isEmpty()) {
     		try {
     			this.wait();
-    			System.out.println("hei");
     		}catch(Exception e){
     			e.printStackTrace();
     		}
     	}
     	if(!q.isEmpty()) {
-    		System.out.println("hei");
     		this.notifyAll();
     		return q.remove();
     	}

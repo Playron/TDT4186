@@ -29,10 +29,8 @@ public class Waitress implements Runnable {
      */
     @Override
     public void run() {
-    	System.out.println("smud12");
     	while(SushiBar.isOpen || !wa.isEmpty()) { 
     		customer = wa.next();
-    		System.out.println(customer);
 	    	if(customer != null) {
 	    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " er servert");
 	    		try {
