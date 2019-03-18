@@ -6,12 +6,17 @@ package Oving1;
  */
 public class Door implements Runnable {
 
+	
+	WaitingArea wa;
+	
+	
     /**
      * Creates a new Door. Make sure to save the
      * @param waitingArea   The customer queue waiting for a seat
      */
     public Door(WaitingArea waitingArea) {
         // TODO Implement required functionality
+    	wa = waitingArea;
     }
 
     /**
