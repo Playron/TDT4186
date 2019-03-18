@@ -3,6 +3,13 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+
+import Oving1.Clock;
+import Oving1.Door;
+import Oving1.SushiBar;
+import Oving1.WaitingArea;
+import Oving1.Waitress;
 
 
 public class SushiBar {
@@ -36,6 +43,9 @@ public class SushiBar {
         totalOrders = new SynchronizedInteger(0);
         servedOrders = new SynchronizedInteger(0);
         takeawayOrders = new SynchronizedInteger(0);
+        
+        
+
 
         // TODO initialize the bar and start the different threads
     }

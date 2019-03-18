@@ -1,16 +1,27 @@
 package Oving1;
+
+import Oving1.Customer;
+import Oving1.SushiBar;
+import Oving1.WaitingArea;
+
 /**
  * This class implements the consumer part of the producer/consumer problem.
  * One waitress instance corresponds to one consumer.
  */
 public class Waitress implements Runnable {
 
+	
+	   private WaitingArea wa;
+	   private Customer customer;
+	
     /**
      * Creates a new waitress. Make sure to save the parameter in the class
      *
      * @param waitingArea The waiting area for customers
      */
     Waitress(WaitingArea waitingArea) {
+    	
+    	waitingArea = wa;
         // TODO Implement required functionality
     }
 
@@ -20,9 +31,10 @@ public class Waitress implements Runnable {
      */
     @Override
     public void run() {
-        // TODO Implement required functionality
+        
     }
 
-
 }
+
+
 

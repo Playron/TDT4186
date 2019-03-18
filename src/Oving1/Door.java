@@ -33,7 +33,9 @@ public class Door implements Runnable {
     	}catch(Exception e) {
     		e.printStackTrace();
     	}
-    	wa.notifyAll();
+    	synchronized (wa) {
+    		wa.notifyAll();	
+		}
     }
 
     // Add more methods as you see fit
