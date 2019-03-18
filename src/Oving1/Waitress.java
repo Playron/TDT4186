@@ -1,3 +1,4 @@
+package Oving1;
 /**
  * This class implements the consumer part of the producer/consumer problem.
  * One waitress instance corresponds to one consumer.

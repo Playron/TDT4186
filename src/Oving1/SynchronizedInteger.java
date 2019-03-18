@@ -1,3 +1,4 @@
+package Oving1;
 public class SynchronizedInteger {
     private int c ;
 

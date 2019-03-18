@@ -1,3 +1,5 @@
+package Oving1;
+
 /**
  * This class implements the Door component of the sushi bar assignment
  * The Door corresponds to the Producer in the producer/consumer problem

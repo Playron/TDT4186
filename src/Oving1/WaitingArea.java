@@ -1,3 +1,4 @@
+package Oving1;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -37,6 +38,7 @@ public class WaitingArea {
     		}if(SushiBar.isOpen) {
     			customer.notify();
     			q.add(customer);
+    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #:" + );
     		}
     		
     	}
