@@ -26,6 +26,14 @@ public class Door implements Runnable {
     @Override
     public void run() {
         // TODO Implement required functionality
+    	while(SushiBar.isOpen) {
+    		wa.enter(new Customer());
+    	}try {
+    		
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    	wa.notifyAll();
     }
 
     // Add more methods as you see fit
