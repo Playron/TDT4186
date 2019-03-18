@@ -17,8 +17,8 @@ public class WaitingArea {
 	private int size;
 	
     public WaitingArea(int size) {
+    	this.size = size;
         q = new LinkedList<Customer>();
-        this.size = size;
     }
 
     /**
@@ -27,45 +27,40 @@ public class WaitingArea {
      * @param customer A customer created by Door, trying to enter the waiting area
      */
     public synchronized void enter(Customer customer) {
-        // TODO Implement required functionality
-    	while(q.size() >= size) {
+    	while(q.size() >= this.size) {
     		try {
-    			customer.wait();
+    			this.wait();
     		}
-    		catch(Exception e){
+    		catch(InterruptedException e){
     			e.printStackTrace();
-    			
-    		}if(SushiBar.isOpen) {
-    			customer.notify();
-    			q.add(customer);
-    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " venter");
     		}
-    		
     	}
-    	
-    	
+		if(SushiBar.isOpen) {
+			this.notifyAll();
+			q.add(customer);
+			SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " venter");
+		}
     }
 
     /**
      * @return The customer that is first in line.
      */
     public synchronized Customer next() {
+    	System.out.println("NEXT");
     	while(SushiBar.isOpen && q.isEmpty()) {
     		try {
     			this.wait();
+    			System.out.println("hei");
     		}catch(Exception e){
     			e.printStackTrace();
     		}
-    		if(q.isEmpty() == false) {
-    			this.notifyAll();
-    			return q.remove();
-    		}
     	}
-    	
+    	if(!q.isEmpty()) {
+    		System.out.println("hei");
+    		this.notifyAll();
+    		return q.remove();
+    	}
     	return null;
-        // TODO Implement required functionality
-    	
-    	
     }
     
     

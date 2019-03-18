@@ -15,7 +15,7 @@ public class Customer {
      *  Each customer should be given a unique ID
      */
 	
-	private static int customer_numbers = 1;
+	//private static int customer_numbers = 1;
 	private int customer_id;
 	public int orders;
 	
@@ -29,9 +29,8 @@ public class Customer {
      * Here you should implement the functionality for ordering food as described in the assignment.
      */
     public synchronized void order(){
-        // TODO Implement required functionality
     	orders = ThreadLocalRandom.current().nextInt(0, SushiBar.maxOrder + 1);
-    	int takeAway = ThreadLocalRandom.current().nextInt((orders == 0 ? 1 : 0), SushiBar.maxOrder - orders + 1);
+    	int takeAway = ThreadLocalRandom.current().nextInt(0, SushiBar.maxOrder - orders + 1);
     	SushiBar.servedOrders.add(orders);
     	SushiBar.takeawayOrders.add(takeAway);
     	SushiBar.totalOrders.add(orders + takeAway);

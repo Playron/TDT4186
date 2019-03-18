@@ -44,6 +44,33 @@ public class SushiBar {
         servedOrders = new SynchronizedInteger(0);
         takeawayOrders = new SynchronizedInteger(0);
         
+        WaitingArea waitingArea = new WaitingArea(waitingAreaCapacity);
+        Clock clock = new Clock(duration);
+        Thread doorThread = new Thread(new Door(waitingArea));
+        doorThread.start();
+
+        ArrayList<Thread> waitresses = new ArrayList<>();
+        for (int i = 0; i < waitressCount; i++) {
+            Thread waitressThread = new Thread(new Waitress(waitingArea));
+            waitresses.add(waitressThread);
+            waitressThread.start();
+        }
+
+        try {
+            doorThread.join();
+            for (int i = 0; i < waitressCount; i++) {
+                waitresses.get(i).join();
+            }
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        SushiBar.write("***** NO MORE CUSTOMERS - THE SHOP IS CLOSED NOW. *****\n");
+
+        SushiBar.write("Total orders: " + SushiBar.totalOrders.get());
+        SushiBar.write("Total takeaways: " + SushiBar.takeawayOrders.get());
+        SushiBar.write("Total bar orders: " + SushiBar.servedOrders.get());
+        
         
 
 

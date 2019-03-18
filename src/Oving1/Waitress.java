@@ -20,9 +20,7 @@ public class Waitress implements Runnable {
      * @param waitingArea The waiting area for customers
      */
     Waitress(WaitingArea waitingArea) {
-    	
-    	waitingArea = wa;
-        // TODO Implement required functionality
+    	wa = waitingArea;
     }
 
     /**
@@ -31,32 +29,29 @@ public class Waitress implements Runnable {
      */
     @Override
     public void run() {
-    	while(SushiBar.isOpen ) { 
+    	System.out.println("smud12");
+    	while(SushiBar.isOpen || !wa.isEmpty()) { 
     		customer = wa.next();
-    		if(customer != null) {
-    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " er servert");
-    		}
-    		try {
-    			Thread.sleep(SushiBar.waitressWait);
-    		}
-    		catch(Exception e) {
-    			e.printStackTrace();
-    		}
-    		
-    		
-    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() +  " spiser");
-    		customer.order();
-    		try {
-    			Thread.sleep(customer.getOrders() * SushiBar.customerWait);
-    		}catch(Exception e) {
-    			e.printStackTrace();
-    		}
-    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " drar");
-        
+    		System.out.println(customer);
+	    	if(customer != null) {
+	    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " er servert");
+	    		try {
+	    			Thread.sleep(SushiBar.waitressWait);
+	    		}
+	    		catch(InterruptedException e) {
+	    		
+	    		}
+	    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() +  " spiser");
+	    		customer.order();
+	    		try {
+	    			Thread.sleep(customer.getOrders() * SushiBar.customerWait);
+	    		}catch(InterruptedException e) {
+	    			
+	    		}
+	    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " drar");
+	    	}
+    	}
     }
-  }
-    	
-
 }
 
 
