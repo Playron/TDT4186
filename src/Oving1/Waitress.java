@@ -31,8 +31,31 @@ public class Waitress implements Runnable {
      */
     @Override
     public void run() {
+    	while(SushiBar.isOpen ) { 
+    		customer = wa.next();
+    		if(customer != null) {
+    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " er servert");
+    		}
+    		try {
+    			Thread.sleep(SushiBar.waitressWait);
+    		}
+    		catch(Exception e) {
+    			e.printStackTrace();
+    		}
+    		
+    		
+    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() +  " spiser");
+    		customer.order();
+    		try {
+    			Thread.sleep(customer.getOrders() * SushiBar.customerWait);
+    		}catch(Exception e) {
+    			e.printStackTrace();
+    		}
+    		SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " drar");
         
     }
+  }
+    	
 
 }
 

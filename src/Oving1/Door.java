@@ -16,7 +16,7 @@ public class Door implements Runnable {
      */
     public Door(WaitingArea waitingArea) {
         // TODO Implement required functionality
-    	wa = waitingArea;
+    	this.wa = waitingArea;
     }
 
     /**
@@ -29,7 +29,7 @@ public class Door implements Runnable {
     	while(SushiBar.isOpen) {
     		wa.enter(new Customer());
     	}try {
-    		
+    		Thread.sleep(SushiBar.doorWait);
     	}catch(Exception e) {
     		e.printStackTrace();
     	}

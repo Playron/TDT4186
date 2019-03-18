@@ -30,15 +30,15 @@ public class WaitingArea {
         // TODO Implement required functionality
     	while(q.size() >= size) {
     		try {
-    			this.wait();
+    			customer.wait();
     		}
     		catch(Exception e){
     			e.printStackTrace();
     			
     		}if(SushiBar.isOpen) {
-    			this.notify();
+    			customer.notify();
     			q.add(customer);
-    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #: " + customer.getCustomerID() + " venter");
+    			SushiBar.write(Thread.currentThread().getName() + ": Kunde #" + customer.getCustomerID() + " venter");
     		}
     		
     	}
@@ -67,6 +67,8 @@ public class WaitingArea {
     	
     	
     }
+    
+    
     public boolean isEmpty() {
         return q.isEmpty();
     }
