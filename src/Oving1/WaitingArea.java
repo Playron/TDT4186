@@ -33,6 +33,10 @@ public class WaitingArea {
     		}
     		catch(Exception e){
     			e.printStackTrace();
+    			
+    		}if(SushiBar.isOpen) {
+    			customer.notify();
+    			q.add(customer);
     		}
     		
     	}
@@ -45,7 +49,9 @@ public class WaitingArea {
      */
     public synchronized Customer next() {
         // TODO Implement required functionality
+    	
     }
 
     // Add more methods as you see fit
+    
 }
